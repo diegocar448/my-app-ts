@@ -1,20 +1,29 @@
-import {
-  ChakraProvider,
-  Box,
-} from '@chakra-ui/react';
-import { Card } from "./components/Card";
-import { Layout } from "./components/Layout";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Conta from './pages/Conta';
+import { ChakraProvider } from '@chakra-ui/react';
+import { Layout } from './components/Layout';
 
 
 function App() {
   return (
-    <ChakraProvider>
-      <Layout>
-        <Box padding='25px'>
-          <Card />
-        </Box>
-      </Layout>
-    </ChakraProvider>
+    //Tudo que estiver dentro do BrowserRouter terá as configurações de react-router-dom
+    <BrowserRouter>
+      <ChakraProvider>
+        <Layout>
+          <Routes>
+            <Route path='/' element={
+              <Home />
+            } />
+            <Route path='/conta' element={
+              <Conta/>
+            } />
+          </Routes>
+        </Layout>
+      </ChakraProvider>      
+    </BrowserRouter>
+
+    
   );
 }
 

@@ -34,12 +34,13 @@ export const Card = () => {
   console.log(userData)
 
   return (
-    // <>
-    //   <Header />
-    //   <LoginForm />
-    // </>   
-
     <Box background="FFFFFF" borderRadius="25px">
+        {/* { 
+          userData === null || 
+          userData === undefined ?  
+          <h1>Loading...</h1> :
+          <h1>Informações carregadas</h1>
+        } */}
         <Center>
           <h1>Faça o Login</h1>          
         </Center>        
