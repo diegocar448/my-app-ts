@@ -1,19 +1,22 @@
 import {  
   Box,  
   Text,
-  Center,
+  Center,  
 } from "@chakra-ui/react";
+import { useContext } from 'react';
+import { AppContext } from "../../App";
 
 export const Header = () => {
-  return (
-    
+  const context = useContext(AppContext)
+  console.log('retorno do header', context)
+
+  return (    
       <Box backgroundColor='orange'>        
         <Center>
           <Text fontSize='3xl'>
             Dio Bank
           </Text>
-        </Center>
-      </Box>
-    
+        </Center>        
+      </Box>    
   );
 };
