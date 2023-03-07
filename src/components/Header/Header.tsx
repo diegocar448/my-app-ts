@@ -1,7 +1,5 @@
-import {
-  ChakraProvider,
-  Box,
-  Heading,
+import {  
+  Box,  
   Text,
   Center,
 } from "@chakra-ui/react";
