@@ -9,7 +9,7 @@ export const Header = () => {
     
       <Box backgroundColor='orange'>        
         <Center>
-          <Text fontSize='3x1'>
+          <Text fontSize='3xl'>
             Dio Bank
           </Text>
         </Center>
