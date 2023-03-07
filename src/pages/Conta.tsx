@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import CardInfo from "../components/CardInfo"
 import { useContext, useEffect, useState } from "react";
 import { api } from "../api";
-import { AppContext } from "../App";
+import { AppContext } from "../components/AppContext";
 
 
 interface UserData{
@@ -17,10 +17,15 @@ interface UserData{
 const Conta = () =>{
 
     const [ userData, setUserData ] = useState<null | UserData>();
+    const { id } = useParams()
+    const navigate = useNavigate()
 
-    const context = useContext(AppContext);
+    const { isLoggedIn } = useContext(AppContext);
     
-    console.log("Conta retorno", context)
+    console.log("Conta retorno", isLoggedIn)
+
+    //login false volta para home
+    !isLoggedIn && navigate('/')
   
     useEffect(() => {
     const getData = async () => {
@@ -31,8 +36,7 @@ const Conta = () =>{
     }, [])
     
     const actualData = new Date();
-    const { id } = useParams()
-    const navigate = useNavigate()
+    
     
 
     if(userData && id !== userData.id){
