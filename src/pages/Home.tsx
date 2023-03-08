@@ -2,7 +2,7 @@ import { Box, Center, Input } from "@chakra-ui/react";
 import { Card } from "../components/Card";
 import { DButton } from "../components/DButton";
 import { useState } from "react";
-import { login } from "../services/login";
+import { Login } from "../services/login";
 
 const Home = () => {
     const [ email, setEmail ] = useState<string>('');
@@ -16,7 +16,7 @@ const Home = () => {
                 <Input placeholder="email" value={email} onChange={ (e) => setEmail(e.target.value) }></Input>
                 <Input placeholder="password"></Input>
                 <Center>
-                    <DButton onClick={ () => login(email)} />
+                    <DButton onClick={ () => Login(email)} />
                 </Center>
             </Card>
         </Box>

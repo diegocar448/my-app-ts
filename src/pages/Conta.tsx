@@ -20,9 +20,7 @@ const Conta = () =>{
     const { id } = useParams()
     const navigate = useNavigate()
 
-    const { isLoggedIn } = useContext(AppContext);
-    
-    console.log("Conta retorno", isLoggedIn)
+    const { isLoggedIn } = useContext(AppContext);    
 
     //login false volta para home
     !isLoggedIn && navigate('/')
@@ -36,8 +34,6 @@ const Conta = () =>{
     }, [])
     
     const actualData = new Date();
-    
-    
 
     if(userData && id !== userData.id){
         navigate('/')
