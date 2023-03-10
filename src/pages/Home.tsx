@@ -15,12 +15,12 @@ const Home = () => {
         const loggedIn = await login(email);
 
         if(!loggedIn){
-            alert("Email inválido")
-            setIsLoggedIn(false)
-        }else{
-            setIsLoggedIn(true)
-            navigate("/conta/1")
+            return alert("Email inválido")            
         }
+        
+        setIsLoggedIn(true)
+        navigate("/conta/1")
+        
         
     }
 
