@@ -5,6 +5,7 @@ import { Card } from "../components/Card";
 import { DButton } from "../components/DButton";
 import { login } from "../services/login";
 import { AppContext } from "../components/AppContext";
+import { changeLocalStorage } from "../services/storage";
 
 const Home = () => {
     const [ email, setEmail ] = useState<string>('');
@@ -18,7 +19,9 @@ const Home = () => {
             return alert("Email inválido")            
         }
         
+
         setIsLoggedIn(true)
+        changeLocalStorage({ login: true })
         navigate("/conta/1")
         
         
