@@ -14,7 +14,8 @@ import { EmailIcon, LockIcon } from "@chakra-ui/icons"
 import { AcceptButton } from "../Buttons/AcceptButton";
 import { welcome } from "../../services/welcomeService";
 
-export const LoginForm = () => {
+export const LoginForm = () => {   
+  
   return (
     <ChakraProvider>
       <Box
@@ -22,7 +23,7 @@ export const LoginForm = () => {
         backgroundColor="#cdcdcd"
         padding="25px"
         fontFamily={"sans-serif"}
-      >
+      >        
         <Center>
           <Box
             backgroundColor="#262d2a4d"

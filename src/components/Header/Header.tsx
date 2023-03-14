@@ -18,7 +18,14 @@ export const Header = () => {
 
   
   const logout = () => {
-    changeLocalStorage({ login: false })
+    changeLocalStorage(
+      { 
+        login: false,
+        name: '',
+        email: '',
+        balance: ''
+      }
+    )
     setIsLoggedIn(false)
     navigate('/');
   }

@@ -20,14 +20,14 @@ const Conta = () =>{
     const { id } = useParams()
     const navigate = useNavigate()
 
-    const { isLoggedIn } = useContext(AppContext);    
+    const { isLoggedIn, informationsUser } = useContext(AppContext);    
 
     //login false volta para home
     !isLoggedIn && navigate('/')
   
     useEffect(() => {
     const getData = async () => {
-        const data: any | UserData = await api;
+        const data: any | UserData = await api;        
         setUserData(data);
     }
     getData();

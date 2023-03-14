@@ -11,7 +11,9 @@ const MainRoutes = () => {
     return (
         <Routes>
             <Route path='/' element={
-                <Home />
+                isLoggedIn ?
+                <Conta/> :
+                <Home />                    
                 } 
             />            
             <Route path='/conta/:id' element={                    
@@ -21,7 +23,9 @@ const MainRoutes = () => {
                 } 
             />
             <Route path='/infoconta/' element={
-                <ContaInfo/>
+                isLoggedIn ?
+                <ContaInfo/> :
+                <Home />
                 } 
             />
         </Routes>

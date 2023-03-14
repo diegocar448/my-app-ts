@@ -4,7 +4,6 @@ interface ICardInfo {
     mainContent: string,
     content: string
 }
-
 const CardInfo = ({ mainContent, content }: ICardInfo) => {
     return (
         <Box 
